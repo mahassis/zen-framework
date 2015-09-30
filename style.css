@@ -111,6 +111,11 @@ p{
   line-height: 20px;
   margin-left: 10px;
 }
+a{
+  text-decoration:none;
+  font-size: 14px;
+  color:#1e6bb8;
+}
 /*Block Elements Tags*/
 article{
   display:block;

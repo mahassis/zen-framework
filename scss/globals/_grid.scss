@@ -1,0 +1,65 @@
+/*===================================
+=            Grid system            =
+===================================*/
+
+.wrapper {
+  margin: 0 auto;
+}
+
+.block {
+  width: 1180px;
+  height: auto;
+}
+
+[class*="block"] {
+  float: left;
+  min-height: 1px;
+}
+
+.block-12 {
+  width: 1180px;
+}
+
+.block-11 {
+  width: 1080px;
+}
+
+.block-10 {
+  width: 980px;
+}
+
+.block-9 {
+  width: 880px;
+}
+
+.block-8 {
+  width: 780px;
+}
+
+.block-7 {
+  width: 680px;
+}
+
+.block-6 {
+  width: 580px;
+}
+
+.block-5 {
+  width: 480px;
+}
+
+.block-4 {
+  width: 380px;
+}
+
+.block-3 {
+  width: 280px;
+}
+
+.block-2 {
+  width: 180px;
+}
+
+.block-1 {
+  width: 80px;
+}

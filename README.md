@@ -4,7 +4,7 @@
 Zen Framework, as the name says, is a css framework tha uses a extremely simple semantic and provides a readable css code. It does not provides JS yet, but in futures updates it'll.
 ## Objective ##
 The main objective is create a framework that anyone can underestand and use it in their projects. In this first version, it will only have a css document.
-The css document is separated in usage parts.
+The css document is separated in usage parts. <br/>
 E.g:
 /* Global */ <br/>
 .wrapper{

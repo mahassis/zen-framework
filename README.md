@@ -6,8 +6,8 @@ Zen Framework, as the name says, is a css framework tha uses a extremely simple 
 The main objective is create a framework that anyone can underestand and use it in their projects. In this first version, it will only have a css document.
 The css document is separated in usage parts.
 E.g:
-/* Global */
-* .wrapper{
+/* Global */ <br/>
+.wrapper{
   margin: 0 auto;
 }
 ## Author ##

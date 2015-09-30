@@ -19,7 +19,7 @@ html{
   width:  1180px;
   height: auto;
 }
-[class="block-*"]{
+[class*="block"]{
   float:left;
   min-height:1px;
 }

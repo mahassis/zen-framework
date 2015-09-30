@@ -73,7 +73,6 @@ html{
 .to-right{
   float:right;
 }
-/*Tags*/
 /*Text-Tags*/
 h1{
   font-family: 'Open Sans', sans-serif;
@@ -117,6 +116,25 @@ a{
   color:#1e6bb8;
 }
 /*Block Elements Tags*/
-article{
+article,
+aside, 
+details, 
+figcaption, 
+figure, 
+footer, 
+header, 
+hgroup, 
+main, 
+menu, 
+nav, 
+section, 
+summary{
   display:block;
+}
+/*Events*/
+a:hover{
+  text-decoration:underline;
+}
+a:visited{
+  color:#159957;
 }

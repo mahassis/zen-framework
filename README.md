@@ -1,16 +1,72 @@
-# Zen Framework - Projeto em Desenvolvimento :)
+# Zen Framework
+
+
+```
+ _____
+|__  /___ _ __
+  / // _ \ '_ \
+ / /|  __/ | | |
+/____\___|_| |_|
+
+```
+
+> :warning: Projeto em Desenvolvimento :)
+
 [See how it works](http://igorfelipee.github.io/zen-framework) -
-## About ##
+
+## About
+
 Zen Framework, as the name says, is a css framework tha uses a extremely simple semantic and provides a readable css code. It does not provides JS yet, but in futures updates it'll.
-## Objective ##
+
+## Objective
+
 The main objective is create a framework that anyone can underestand and use it in their projects. In this first version, it will only have a css document.
-The css document is separated in usage parts. <br>
-E.g:<br>
-/* Global */ <br>
+The css document is separated in usage parts.
+
+E.g:
+
+```
+/* Global */
 .wrapper{
   margin: 0 auto;
 }
-## Author ##
+```
+
+## Structure
+
+```
+zen-framework/
+  ├── zen.scss
+  ├── zen.css
+  ├── zen.min.css
+  │
+  └── scss/
+      ├── settings/
+      │   ├── _variables.scss
+      │   ├── _mixins.scss
+      │   ├── _functions.scss
+      │   └── _placeholders.scss
+      │
+      ├── globals/
+      │   ├── _globals.scss
+      │   ├── _grid.scss
+      │   ├── _text-tags.scss
+      │   └── _block-tags.scss
+      │
+      ├── helpers/
+      │
+      └── vendor/
+```
+
+## How to use
+
+1. clone the repo: `git clone https://github.com/igorfelipee/zen-framework.git`
+2. install the [sass lang](http://sass-lang.com/): `[sudo] gem install sass`
+3. rum sass command: `sass zen.scss:zen.css --style expanded` or `sass zen.scss:zen.min.css --style compressed`
+4. enjoy!
+
+## Author
+
 * [Add me on Facebook](https://www.facebook.com/igor.felipe.198765)
 * [Follow me on Twitter](http://twitter.com/igorfelipee)
 * [Follow me on GitHub](http://github.com/igorfelipee)

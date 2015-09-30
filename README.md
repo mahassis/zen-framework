@@ -1,5 +1,5 @@
-# Zen Framework - DEVELOPMENT STATE
-[See how it works]()
+# Zen Framework - 
+[See how it works](http://igorfelipee.github.io/zen-framework)
 ## About ##
 Zen Framework, as the name says, is a css framework tha uses a extremely simple semantic and provides a readable css code. It does not provides JS yet, but in futures updates it'll.
 ## Objective ##

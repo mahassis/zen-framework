@@ -111,3 +111,7 @@ p{
   line-height: 20px;
   margin-left: 10px;
 }
+/*Block Elements Tags*/
+article{
+  display:block;
+}

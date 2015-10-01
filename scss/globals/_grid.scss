@@ -26,3 +26,14 @@
     min-height: 1px;
   }
 }
+
+
+/*
+  Floating the last element that receive the col class
+*/
+
+[class*="col"]{
+  &:last-of-type {
+    float: right;
+  }
+}

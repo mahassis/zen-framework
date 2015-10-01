@@ -1,17 +1,36 @@
 /*!
  * Zen Framework | v1.0.0 - http://igorfelipee.github.io/zen-framework/
  */
-/*
-	# Remove this
-	To use, insert enough @include transition();
-	Example: @include transition(opacity .2s ease);
-*/
-/*
-	# Remove this
-	To use, insert enough @include transform();
-	Example: @include transform(rotate(90deg) scale(1.1));
-*/
 @import url(//fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic);
+.row:before, .container:before, .clearfix:before, .row:after, .container:after, .clearfix:after {
+  content: "";
+  display: table;
+}
+.row:after, .container:after, .clearfix:after {
+  clear: both;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+}
+
+.column,
+[class*="col-"] {
+  float: left;
+  position: relative;
+  width: 100%;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+}
+
+.row {
+  margin-left: -0.9375em;
+  margin-right: -0.9375em;
+}
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -259,100 +278,595 @@ body {
 /*===================================
 =            Grid system            =
 ===================================*/
-.wrapper {
-  margin: 0 auto;
+@media screen and (min-width: 43.5em) {
+  .container {
+    width: 41.625em;
+  }
+}
+@media screen and (min-width: 60em) {
+  .container {
+    width: 58.125em;
+  }
 }
 
-.block {
-  width: 1180px;
-  height: auto;
-}
-
-/*
-  Automating CSS writing process.
-
-  With this feature you should only set
-  the number of columns and let the magic happen.
-*/
 .col-1 {
-  float: left;
   width: 8.33333%;
-  min-height: 1px;
 }
 
 .col-2 {
-  float: left;
   width: 16.66667%;
-  min-height: 1px;
 }
 
 .col-3 {
-  float: left;
   width: 25%;
-  min-height: 1px;
 }
 
 .col-4 {
-  float: left;
   width: 33.33333%;
-  min-height: 1px;
 }
 
 .col-5 {
-  float: left;
   width: 41.66667%;
-  min-height: 1px;
 }
 
 .col-6 {
-  float: left;
   width: 50%;
-  min-height: 1px;
 }
 
 .col-7 {
-  float: left;
   width: 58.33333%;
-  min-height: 1px;
 }
 
 .col-8 {
-  float: left;
   width: 66.66667%;
-  min-height: 1px;
 }
 
 .col-9 {
-  float: left;
   width: 75%;
-  min-height: 1px;
 }
 
 .col-10 {
-  float: left;
   width: 83.33333%;
-  min-height: 1px;
 }
 
 .col-11 {
-  float: left;
   width: 91.66667%;
-  min-height: 1px;
 }
 
 .col-12 {
-  float: left;
   width: 100%;
-  min-height: 1px;
 }
 
-/*
-  Floating the last element that receive the col class
-*/
-[class*="col"]:last-of-type {
-  float: right;
+.col-pull-1 {
+  right: -8.33333%;
 }
 
+.col-pull-2 {
+  right: -16.66667%;
+}
+
+.col-pull-3 {
+  right: -25%;
+}
+
+.col-pull-4 {
+  right: -33.33333%;
+}
+
+.col-pull-5 {
+  right: -41.66667%;
+}
+
+.col-pull-6 {
+  right: -50%;
+}
+
+.col-pull-7 {
+  right: -58.33333%;
+}
+
+.col-pull-8 {
+  right: -66.66667%;
+}
+
+.col-pull-9 {
+  right: -75%;
+}
+
+.col-pull-10 {
+  right: -83.33333%;
+}
+
+.col-pull-11 {
+  right: -91.66667%;
+}
+
+.col-pull-12 {
+  right: -100%;
+}
+
+.col-push-1 {
+  left: 8.33333%;
+}
+
+.col-push-2 {
+  left: 16.66667%;
+}
+
+.col-push-3 {
+  left: 25%;
+}
+
+.col-push-4 {
+  left: 33.33333%;
+}
+
+.col-push-5 {
+  left: 41.66667%;
+}
+
+.col-push-6 {
+  left: 50%;
+}
+
+.col-push-7 {
+  left: 58.33333%;
+}
+
+.col-push-8 {
+  left: 66.66667%;
+}
+
+.col-push-9 {
+  left: 75%;
+}
+
+.col-push-10 {
+  left: 83.33333%;
+}
+
+.col-push-11 {
+  left: 91.66667%;
+}
+
+.col-push-12 {
+  left: 100%;
+}
+
+.col-offset-1 {
+  margin-left: 8.33333%;
+}
+
+.col-offset-2 {
+  margin-left: 16.66667%;
+}
+
+.col-offset-3 {
+  margin-left: 25%;
+}
+
+.col-offset-4 {
+  margin-left: 33.33333%;
+}
+
+.col-offset-5 {
+  margin-left: 41.66667%;
+}
+
+.col-offset-6 {
+  margin-left: 50%;
+}
+
+.col-offset-7 {
+  margin-left: 58.33333%;
+}
+
+.col-offset-8 {
+  margin-left: 66.66667%;
+}
+
+.col-offset-9 {
+  margin-left: 75%;
+}
+
+.col-offset-10 {
+  margin-left: 83.33333%;
+}
+
+.col-offset-11 {
+  margin-left: 91.66667%;
+}
+
+.col-offset-12 {
+  margin-left: 100%;
+}
+
+@media screen and (min-width: 43.5em) {
+  .col-tablet-1 {
+    width: 8.33333%;
+  }
+
+  .col-tablet-2 {
+    width: 16.66667%;
+  }
+
+  .col-tablet-3 {
+    width: 25%;
+  }
+
+  .col-tablet-4 {
+    width: 33.33333%;
+  }
+
+  .col-tablet-5 {
+    width: 41.66667%;
+  }
+
+  .col-tablet-6 {
+    width: 50%;
+  }
+
+  .col-tablet-7 {
+    width: 58.33333%;
+  }
+
+  .col-tablet-8 {
+    width: 66.66667%;
+  }
+
+  .col-tablet-9 {
+    width: 75%;
+  }
+
+  .col-tablet-10 {
+    width: 83.33333%;
+  }
+
+  .col-tablet-11 {
+    width: 91.66667%;
+  }
+
+  .col-tablet-12 {
+    width: 100%;
+  }
+
+  .col-tablet-pull-1 {
+    right: -8.33333%;
+  }
+
+  .col-tablet-pull-2 {
+    right: -16.66667%;
+  }
+
+  .col-tablet-pull-3 {
+    right: -25%;
+  }
+
+  .col-tablet-pull-4 {
+    right: -33.33333%;
+  }
+
+  .col-tablet-pull-5 {
+    right: -41.66667%;
+  }
+
+  .col-tablet-pull-6 {
+    right: -50%;
+  }
+
+  .col-tablet-pull-7 {
+    right: -58.33333%;
+  }
+
+  .col-tablet-pull-8 {
+    right: -66.66667%;
+  }
+
+  .col-tablet-pull-9 {
+    right: -75%;
+  }
+
+  .col-tablet-pull-10 {
+    right: -83.33333%;
+  }
+
+  .col-tablet-pull-11 {
+    right: -91.66667%;
+  }
+
+  .col-tablet-pull-12 {
+    right: -100%;
+  }
+
+  .col-tablet-push-1 {
+    left: 8.33333%;
+  }
+
+  .col-tablet-push-2 {
+    left: 16.66667%;
+  }
+
+  .col-tablet-push-3 {
+    left: 25%;
+  }
+
+  .col-tablet-push-4 {
+    left: 33.33333%;
+  }
+
+  .col-tablet-push-5 {
+    left: 41.66667%;
+  }
+
+  .col-tablet-push-6 {
+    left: 50%;
+  }
+
+  .col-tablet-push-7 {
+    left: 58.33333%;
+  }
+
+  .col-tablet-push-8 {
+    left: 66.66667%;
+  }
+
+  .col-tablet-push-9 {
+    left: 75%;
+  }
+
+  .col-tablet-push-10 {
+    left: 83.33333%;
+  }
+
+  .col-tablet-push-11 {
+    left: 91.66667%;
+  }
+
+  .col-tablet-push-12 {
+    left: 100%;
+  }
+
+  .col-tablet-offset-1 {
+    margin-left: 8.33333%;
+  }
+
+  .col-tablet-offset-2 {
+    margin-left: 16.66667%;
+  }
+
+  .col-tablet-offset-3 {
+    margin-left: 25%;
+  }
+
+  .col-tablet-offset-4 {
+    margin-left: 33.33333%;
+  }
+
+  .col-tablet-offset-5 {
+    margin-left: 41.66667%;
+  }
+
+  .col-tablet-offset-6 {
+    margin-left: 50%;
+  }
+
+  .col-tablet-offset-7 {
+    margin-left: 58.33333%;
+  }
+
+  .col-tablet-offset-8 {
+    margin-left: 66.66667%;
+  }
+
+  .col-tablet-offset-9 {
+    margin-left: 75%;
+  }
+
+  .col-tablet-offset-10 {
+    margin-left: 83.33333%;
+  }
+
+  .col-tablet-offset-11 {
+    margin-left: 91.66667%;
+  }
+
+  .col-tablet-offset-12 {
+    margin-left: 100%;
+  }
+}
+@media screen and (min-width: 60em) {
+  .col-desktop-1 {
+    width: 8.33333%;
+  }
+
+  .col-desktop-2 {
+    width: 16.66667%;
+  }
+
+  .col-desktop-3 {
+    width: 25%;
+  }
+
+  .col-desktop-4 {
+    width: 33.33333%;
+  }
+
+  .col-desktop-5 {
+    width: 41.66667%;
+  }
+
+  .col-desktop-6 {
+    width: 50%;
+  }
+
+  .col-desktop-7 {
+    width: 58.33333%;
+  }
+
+  .col-desktop-8 {
+    width: 66.66667%;
+  }
+
+  .col-desktop-9 {
+    width: 75%;
+  }
+
+  .col-desktop-10 {
+    width: 83.33333%;
+  }
+
+  .col-desktop-11 {
+    width: 91.66667%;
+  }
+
+  .col-desktop-12 {
+    width: 100%;
+  }
+
+  .col-desktop-pull-1 {
+    right: -8.33333%;
+  }
+
+  .col-desktop-pull-2 {
+    right: -16.66667%;
+  }
+
+  .col-desktop-pull-3 {
+    right: -25%;
+  }
+
+  .col-desktop-pull-4 {
+    right: -33.33333%;
+  }
+
+  .col-desktop-pull-5 {
+    right: -41.66667%;
+  }
+
+  .col-desktop-pull-6 {
+    right: -50%;
+  }
+
+  .col-desktop-pull-7 {
+    right: -58.33333%;
+  }
+
+  .col-desktop-pull-8 {
+    right: -66.66667%;
+  }
+
+  .col-desktop-pull-9 {
+    right: -75%;
+  }
+
+  .col-desktop-pull-10 {
+    right: -83.33333%;
+  }
+
+  .col-desktop-pull-11 {
+    right: -91.66667%;
+  }
+
+  .col-desktop-pull-12 {
+    right: -100%;
+  }
+
+  .col-desktop-push-1 {
+    left: 8.33333%;
+  }
+
+  .col-desktop-push-2 {
+    left: 16.66667%;
+  }
+
+  .col-desktop-push-3 {
+    left: 25%;
+  }
+
+  .col-desktop-push-4 {
+    left: 33.33333%;
+  }
+
+  .col-desktop-push-5 {
+    left: 41.66667%;
+  }
+
+  .col-desktop-push-6 {
+    left: 50%;
+  }
+
+  .col-desktop-push-7 {
+    left: 58.33333%;
+  }
+
+  .col-desktop-push-8 {
+    left: 66.66667%;
+  }
+
+  .col-desktop-push-9 {
+    left: 75%;
+  }
+
+  .col-desktop-push-10 {
+    left: 83.33333%;
+  }
+
+  .col-desktop-push-11 {
+    left: 91.66667%;
+  }
+
+  .col-desktop-push-12 {
+    left: 100%;
+  }
+
+  .col-desktop-offset-1 {
+    margin-left: 8.33333%;
+  }
+
+  .col-desktop-offset-2 {
+    margin-left: 16.66667%;
+  }
+
+  .col-desktop-offset-3 {
+    margin-left: 25%;
+  }
+
+  .col-desktop-offset-4 {
+    margin-left: 33.33333%;
+  }
+
+  .col-desktop-offset-5 {
+    margin-left: 41.66667%;
+  }
+
+  .col-desktop-offset-6 {
+    margin-left: 50%;
+  }
+
+  .col-desktop-offset-7 {
+    margin-left: 58.33333%;
+  }
+
+  .col-desktop-offset-8 {
+    margin-left: 66.66667%;
+  }
+
+  .col-desktop-offset-9 {
+    margin-left: 75%;
+  }
+
+  .col-desktop-offset-10 {
+    margin-left: 83.33333%;
+  }
+
+  .col-desktop-offset-11 {
+    margin-left: 91.66667%;
+  }
+
+  .col-desktop-offset-12 {
+    margin-left: 100%;
+  }
+}
 /*=================================
 =            Text tags            =
 =================================*/
@@ -383,12 +897,9 @@ h4 {
   font-size: 16px;
 }
 
-h5 {
-  font-size: 13.5px;
-}
-
+h5,
 h6 {
-  font-size: 11px;
+  font-size: 14px;
 }
 
 p {
@@ -430,15 +941,6 @@ summary {
 /*=====================================
 =            Helpers class            =
 =====================================*/
-.clearfix:after {
-  clear: both;
-  content: '';
-  display: block;
-  font-size: 0;
-  height: 0;
-  visibility: hidden;
-}
-
 .to-left {
   float: left;
 }

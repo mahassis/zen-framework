@@ -16,13 +16,9 @@
 	:-ms-input-placeholder 		{ @content; }
 }
 
-/*
-	# Remove this
-	To use, insert enough @include transition();
-	Example: @include transition(opacity .2s ease);
-*/
-
-// Transitions
+// To use, insert enough @include transition();
+// Example: @include transition(opacity .2s ease);
+//
 @mixin transition($transition){
 	transition: 				$transition;
 	-webkit-transition: $transition;
@@ -31,16 +27,105 @@
 }
 
 
-/*
-	# Remove this
-	To use, insert enough @include transform();
-	Example: @include transform(rotate(90deg) scale(1.1));
-*/
-
-// Transform
+// To use, insert enough @include transform();
+// Example: @include transform(rotate(90deg) scale(1.1));
+//
 @mixin transform($transform){
 	transform: 					$transform;
 	-webkit-transform: 	$transform;
 	-moz-transform: 		$transform;
 	-ms-transform: 			$transform;
+}
+
+// convert font-size px to rem
+// To use, insert enough @include font-size($px);
+// Example: @include font-size(18px);
+//
+@mixin font-size($px) {
+  $pxValue: strip-unit($px);
+  $remValue: $pxValue / 16;
+  // font-size: $pxValue + px;
+  font-size: $remValue + rem;
+}
+
+// mixin for media query
+// To use, insert enough @include media();
+// Example:
+// @include media(max-width 360px) {
+//   p {
+//     color: #000;
+//   }
+// }
+//
+@mixin media($query: $feature $value) {
+  @if length($query) == 1 {
+    @media screen and ($default-feature: nth($query, 1)) {
+      @content;
+    }
+  }
+
+  @else {
+    $loop-to: length($query);
+    $media-query: 'screen and ';
+
+    @if length($query) % 2 != 0 {
+      $loop-to: $loop-to - 1;
+    }
+
+    $i: 1;
+    @while $i <= $loop-to {
+      $media-query: $media-query + '(' + nth($query, $i) + ': ' + nth($query, $i + 1) + ') ';
+
+      @if ($i + 1) != $loop-to {
+        $media-query: $media-query + 'and ';
+      }
+
+      $i: $i + 2;
+    }
+
+    @media #{$media-query} {
+      @content;
+    }
+  }
+}
+
+
+// Make the Columns grid
+//
+@mixin make-grid($screen: '-', $columns: $grid-columns) {
+  @for $i from 1 through $columns {
+    .col#{$screen}#{$i} {
+      width: (100% / $columns * $i);
+    }
+  }
+}
+
+// Make the Columns pull
+//
+@mixin make-grid-pull($screen: '-', $columns: $grid-columns) {
+  @for $i from 1 through $columns {
+    .col#{$screen}pull-#{$i} {
+      right: -(percentage(($i / $columns)));
+    }
+  }
+}
+
+// Make the Columns push
+//
+@mixin make-grid-push($screen: '-', $columns: $grid-columns) {
+  @for $i from 1 through $columns {
+    .col#{$screen}push-#{$i} {
+      left: percentage(($i / $columns));
+    }
+  }
+}
+
+// Make the Columns offset
+//
+@mixin make-grid-offset($screen: '-', $columns: $grid-columns) {
+  @for $i from 1 through $columns {
+    .col#{$screen}offset-#{$i} {
+      margin-left: percentage(($i / $columns));
+    }
+  }
 }

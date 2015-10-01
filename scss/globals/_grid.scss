@@ -30,7 +30,7 @@
   @extend %column;
 }
 
-// Make a grid ;)
+// Make a grid responsive Mobile First
 //
 @include make-grid();
 @include make-grid-pull();

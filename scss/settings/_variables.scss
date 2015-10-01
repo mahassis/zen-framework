@@ -2,16 +2,38 @@
 // ==    SASS Variables    ==
 // ==========================
 
-// grid
-$grid-width: 1180px;
-$grid-columns: 12;
-
 // fonts
-$font-family-base: 'Open Sans', Helvetica, sans-serif !default;
-$font-size-base: 14px !default;
+$font-family-base : 'Open Sans', Helvetica, sans-serif !default;
+$font-size-base   : 16px !default;
+$line-height-base : 1.42857143 !default;
 
 // colors
-$color-black:#333333;
-$color-gray:#767676;
-$color-blue:#1e6bb8;
-$color-green:#159957;
+$black-color      : #000 !default;
+$white-color      : #fff !default;
+$silver-color     : #eee !default;
+$gray-color       : #767676 !default;
+$blue-color       : #1e6bb8 !default;
+$green-color      : #159957 !default;
+$text-color       : rgba($black-color, .7);
+$link-color       : $blue-color;
+$link-color-hover : lighten($link-color, 5%);
+
+// font weight
+//
+$weight-light  : 400 !default;
+$weight-normal : 500 !default;
+$weight-bold   : 700 !default;
+$weight-bolder : 900 !default;
+
+// grid
+$grid-width        : 1180px !default;
+$grid-gutter-width : 30px !default;
+$grid-columns      : 12 !default;
+$grid-spacing      : ($grid-gutter-width / 2) !default;
+
+// responsive variables
+$default-feature   : min-width !default;
+$screen-lg-desktop : 80em !default; // 1280px !default;
+$screen-desktop    : 60em !default; // 960px !default;
+$screen-tablet     : 43.5em !default; // 696px !default;
+$screen-phone      : 30em !default; // 480px !default;

@@ -65,8 +65,20 @@ zen-framework/
 3. rum sass command: `sass zen.scss:zen.css --style expanded` or `sass zen.scss:zen.min.css --style compressed`
 4. enjoy!
 
-## Author
+## Bugs and Sugestions
 
-* [Add me on Facebook](https://www.facebook.com/igor.felipe.198765)
-* [Follow me on Twitter](http://twitter.com/igorfelipee)
-* [Follow me on GitHub](http://github.com/igorfelipee)
+The Zen Framework is an **Open Source** project. Anyone can (and should) help us to improve it.
+
+Report bugs or do suggestions using the [Issues/Project Forum](https://github.com/zen-team/zen-framework/issues)
+
+## Contribute to the Project
+
+To contribute, just click on the **Fork** button, create a *Branch*, improve the code and send it with a **Pull Request**.
+
+More details about how to contribute and send Pull Requests in [GitHub Collaborating](https://help.github.com/categories/63/articles).
+
+[How to colaborate to opensource projects on GitHub](http://www.youtube.com/watch?v=H3olaBo83As)
+
+## License
+
+InitSCSS is free under the [open-source MIT license](/LICENSE).

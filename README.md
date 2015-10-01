@@ -10,7 +10,7 @@
 
 ```
 
-> :warning: Projeto em Desenvolvimento :)
+> :warning: work in progress :)
 
 [See how it works](http://igorfelipee.github.io/zen-framework) -
 
@@ -62,7 +62,7 @@ zen-framework/
 
 1. clone the repo: `git clone https://github.com/igorfelipee/zen-framework.git`
 2. install the [sass lang](http://sass-lang.com/): `[sudo] gem install sass`
-3. rum sass command: `sass zen.scss:zen.css --style expanded` or `sass zen.scss:zen.min.css --style compressed`
+3. run sass command: `sass zen.scss:zen.css --style expanded` or `sass zen.scss:zen.min.css --style compressed`
 4. enjoy!
 
 ## Bugs and Sugestions

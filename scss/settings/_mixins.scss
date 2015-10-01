@@ -1,3 +1,18 @@
 // ========================
 // ==    SASS Mixins     ==
 // ========================
+
+
+// Opacity for all browsers.
+@mixin opacity($opacity) {
+	opacity: $opacity;
+	filter: alpha(opacity=($opacity * 100));
+}
+
+// Easy way to style input's placeholder.
+@mixin placeholder {
+	::-webkit-input-placeholder { @content; }
+	:-moz-placeholder 			{ @content; }
+	::-moz-placeholder 			{ @content; }
+	:-ms-input-placeholder 		{ @content; }
+}

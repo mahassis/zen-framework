@@ -7,7 +7,7 @@
 }
 
 .block {
-  width: 1180px;
+  width: $grid-width;
   height: auto;
 }
 
@@ -19,8 +19,6 @@
 */
 
 // Grid system
-$grid-columns: 12;
-
 @for $i from 1 through $grid-columns {
   .col-#{$i}{
     float: left;

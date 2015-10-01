@@ -2,10 +2,15 @@
 // ==    SASS Variables    ==
 // ==========================
 
+// grid
+$grid-width: 1180px;
+$grid-columns: 12;
+
+// fonts
 $font-family-base: 'Open Sans', Helvetica, sans-serif !default;
 $font-size-base: 14px !default;
 
-/*COLORS*/
+// colors
 $color-black:#333333;
 $color-gray:#767676;
 $color-blue:#1e6bb8;

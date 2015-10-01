@@ -3,14 +3,7 @@
 =====================================*/
 
 .clearfix {
-	&:after {
-		clear: both;
-		content: '';
-		display: block;
-		font-size: 0;
-		height: 0;
-		visibility: hidden;
-	}
+	@extend %clearfix;
 }
 
 .to-left {
@@ -41,5 +34,5 @@
 }
 
 .sub-title{
-	color: $color-gray;
+	color: $gray-color;
 }

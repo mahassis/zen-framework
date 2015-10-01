@@ -9,8 +9,8 @@ h4,
 h5,
 h6 {
   font-family: $font-family-base;
-  font-weight: 700;
-  color:$color-black;
+  font-weight: $weight-bold;
+  color: $black-color;
 }
 
 h1 {
@@ -29,12 +29,9 @@ h4 {
   font-size: 16px;
 }
 
-h5 {
-  font-size: 13.5px;
-}
-
+h5,
 h6 {
-  font-size: 11px;
+  font-size: 14px;
 }
 
 p {
@@ -42,19 +39,16 @@ p {
   font-size: $font-size-base;
   line-height: 20px;
   margin-left: 10px;
-  color:$color-black;
+  color: $black-color;
 }
 
 a {
   text-decoration: none;
-  font-size: $font-size-base;
-  color: $color-blue;
+  color: $link-color;
 
-  &:hover {
+  &:hover,
+  &:focus {
     text-decoration: underline;
-  }
-
-  &:visited {
-    color: $color-green;
+    color: $link-color-hover;
   }
 }

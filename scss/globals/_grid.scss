@@ -2,38 +2,51 @@
 =            Grid system            =
 ===================================*/
 
-.wrapper {
-  margin: 0 auto;
-}
+// container
+//
+.container {
+  @extend %container;
+  @extend %clearfix;
 
-.block {
-  width: $grid-width;
-  height: auto;
-}
+  @include media(min-width $screen-tablet) {
+    width: ($screen-tablet - em($grid-gutter-width));
+  }
 
-/*
-  Automating CSS writing process.
-
-  With this feature you should only set
-  the number of columns and let the magic happen.
-*/
-
-// Grid system
-@for $i from 1 through $grid-columns {
-  .col-#{$i}{
-    float: left;
-    width: 100% / $grid-columns * $i;
-    min-height: 1px;
+  @include media(min-width $screen-desktop) {
+    width: ($screen-desktop - em($grid-gutter-width));
   }
 }
 
+// row
+//
+.row {
+  @extend %make-row;
+}
 
-/*
-  Floating the last element that receive the col class
-*/
+// columns
+//
+.column,
+[class*="col-"] {
+  @extend %column;
+}
 
-[class*="col"]{
-  &:last-of-type {
-    float: right;
-  }
+// Make a grid responsive Mobile First
+//
+@include make-grid();
+@include make-grid-pull();
+@include make-grid-push();
+@include make-grid-offset();
+
+@include media(min-width $screen-tablet) {
+  @include make-grid('-tablet-');
+  @include make-grid-pull('-tablet-');
+  @include make-grid-push('-tablet-');
+  @include make-grid-offset('-tablet-');
+}
+
+@include media(min-width $screen-desktop) {
+  @include make-grid('-desktop-');
+  @include make-grid-pull('-desktop-');
+  @include make-grid-push('-desktop-');
+  @include make-grid-offset('-desktop-');
 }

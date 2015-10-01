@@ -2,7 +2,11 @@
 // ==    SASS Functions   ==
 // =========================
 
+<<<<<<< HEAD
 //Transform px in em.
+=======
+//Transform px in em
+>>>>>>> Some functions, mixins and utils
 @function em($target, $context: $font-size-base) {
 	@return ($target / $context) * 1em;
 }

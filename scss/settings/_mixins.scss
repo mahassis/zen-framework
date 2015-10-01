@@ -16,3 +16,32 @@
 	::-moz-placeholder 			{ @content; }
 	:-ms-input-placeholder 		{ @content; }
 }
+
+/*
+	# Remove this
+	To use, insert enough @include transition();
+	Example: @include transition(opacity .2s ease);
+*/
+
+// Transitions
+@mixin transition($transition){
+	transition: 				$transition;
+	-webkit-transition: $transition;
+	-moz-transition: 		$transition;
+	-ms-transition: 		$transition;
+}
+
+
+/*
+	# Remove this
+	To use, insert enough @include transform();
+	Example: @include transform(rotate(90deg) scale(1.1));
+*/
+
+// Transform
+@mixin transform($transform){
+	transform: 					$transform;
+	-webkit-transform: 	$transform;
+	-moz-transform: 		$transform;
+	-ms-transform: 			$transform;
+}

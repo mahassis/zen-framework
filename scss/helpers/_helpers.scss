@@ -3,8 +3,14 @@
 =====================================*/
 
 .clearfix {
-  overflow: auto;
-  zoom: 1;
+	&:after {
+		clear: both;
+		content: '';
+		display: block;
+		font-size: 0;
+		height: 0;
+		visibility: hidden;
+	}
 }
 
 .to-left {
@@ -13,4 +19,23 @@
 
 .to-right {
   float: right;
+}
+
+.align-center {
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate3d(-50%, -50%, 0);
+	transform: translate3d(-50%, -50%, 0);	
+}
+
+.align-horizontal {
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);	
+}
+
+.align-vertical {
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);	
 }
